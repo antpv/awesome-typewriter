@@ -189,7 +189,6 @@ a {
 .body__links-block a[class="git-link"] {
 	display: inline-block;
 	height: 40px;
-	padding-left: 30px;
 	margin-top: 15px;
 	line-height: 40px;
 	color: #fff;
@@ -199,7 +198,14 @@ a {
 	-webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out;
 	-o-transition: background-color .3s ease-in-out, color .3s ease-in-out;
 	transition: background-color .3s ease-in-out, color .3s ease-in-out;
-	position: relative;
+}
+
+.body__links-block a[class="git-link"] img {
+	margin-top: 9px;
+	margin-right: 5px;
+	vertical-align: top;
+	width: 20px;
+	height: 20px;
 }
 
 
@@ -325,15 +331,6 @@ a {
 .bottom__heart img {
 	width: 14px;
 	height: 14px;
-}
-.body__links-block a[class="git-link"] img {
-	position: absolute;
-	content: '';
-	display: inline-block;
-	top: 9px;
-	left: 0;
-	width: 20px;
-	height: 20px;
 }
 
 /* ==== CODE STYLE ====*/
