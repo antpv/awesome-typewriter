@@ -201,15 +201,6 @@ a {
 	transition: background-color .3s ease-in-out, color .3s ease-in-out;
 	position: relative;
 }
-.body__links-block a[class="git-link"] img {
-	position: absolute;
-	content: '';
-	top: 9px;
-	left: 0;
-	border-radius: 30px;
-	width: 20px;
-	height: 20px;
-}
 
 
 
@@ -335,14 +326,33 @@ a {
 	width: 14px;
 	height: 14px;
 }
+.body__links-block a[class="git-link"] img {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	top: 9px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+}
 
 /* ==== CODE STYLE ====*/
 
-.S{color:#fb9666}/* Строки красные */
-.func{color:#90b0e7}/* Юзер-функции синие */
-.C{color:#888}/* Комменты оранжевые */
-.kwrd{color: #e790b4;}/* Ключевые слова полужирные */
-.R{color:#888} /*Серые регвыражения */
+.S {
+	color: #fb9666;
+}
+.func {
+	color: #90b0e7;
+}
+.C {
+	color: #888;
+}
+.kwrd {
+	color: #e790b4;
+}
+.R {
+	color: #888;
+}
 
 /* ==== MEDIA ==== */
 
