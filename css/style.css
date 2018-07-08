@@ -215,6 +215,11 @@ a {
 	margin: 10px 0;
 }
 
+.content__text a {
+	color: #307e95;
+	border-bottom: 1px solid #e0e0e0;
+}
+
 .content__subtitle  {
 	margin-bottom: 10px;
 }
