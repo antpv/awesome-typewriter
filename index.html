@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="body">
+	<div class="body__centering">
+		<div class="body__title">
+			<h1>typing.js</h1>
+		</div>
+		<div class="body__window"></div>
+		<div class="body__links-block">
+			<a href="" class="get-link">Get Started</a><br>
+			<a href="" class="git-link"><span class="get-link__image"><img src="css/img/github-logo.svg"></span> View on Github</a>
+		</div>
+	</div>
+</div>
+
+<div class="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="content__title">
+					<h2>Installation</h2>
+				</div>
+				<div class="content__text">
+					<p>Connect this script with this code:</p>
+				</div>
+				<div class="content__url">&lt;script src=&quot;https://cdn.jsdelivr.net/gh/user/repo@version/file&quot;/&gt;</div>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="content__title">
+					<h2>Usage</h2>
+				</div>
+
+				<div class="content__text">
+					<p>Run the script:</p>
+					<div class="content__code">new typing(options)</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-12">
+				<div class="content__subtitle">
+					<h3>Options properties:</h3>
+				</div>
+				<div class="content__object-config">
+					<div class="content__object-config_row">
+						element: (<span class="content__value">DOMElementNode</span>)<span class="content__important">!important</span>
+						<div class="content__object-config_row_text">DOM element node in which the script will be executed</div>
+					</div>
+
+					<div class="content__object-config_row">
+						strings: (<span class="content__value">array</span>)
+						<div class="content__object-config_row_text">An array of strings to be typing in the element.<br>Each line will be typed, deleted, and then the next line will be typed.<br>Can be replaced or merged with .type()</div>
+					</div>
+
+					<div class="content__object-config_row">
+						afterStringPause: (<span class="content__value">number</span>)<span class="content__default">default: 1000</span>
+						<div class="content__object-config_row_text">Pause after each typed line.<br>Works only for strings added by options: string parameter</div>
+					</div>
+
+					<div class="content__object-config_row">
+						speed: (<span class="content__value">number</span>)<span class="content__default">default: 60</span>
+						<div class="content__object-config_row_text">Typing speed in milliseconds.</div>
+					</div>
+
+					<div class="content__object-config_row">
+						removalRate: (<span class="content__value">number</span>)<span class="content__default">default: 30</span>
+						<div class="content__object-config_row_text">The rate of removal of text in milliseconds.</div>
+					</div>
+
+					<div class="content__object-config_row">
+						loop: (<span class="content__value">boolean</span>)<span class="content__default">default: false</span>
+						<div class="content__object-config_row_text">A parameter that tells the script to repeat typing text all the time.</div>
+					</div>
+
+					<div class="content__object-config_row">
+						autoStart: (<span class="content__value">boolean</span>)<span class="content__default">default: false</span>
+						<div class="content__object-config_row_text">The parameter responsible for running water, even if the item is not visible to the user at the moment.</div>
+					</div>
+
+					<div class="content__object-config_row">
+						cursor: (<span class="content__value">boolean</span>)<span class="content__default">default: true</span>
+						<div class="content__object-config_row_text">The parameter that is responsible for displaying the cursor.</div>
+					</div>
+
+					<div class="content__object-config_row">
+						cursorHTML: (<span class="content__value">string</span>)<span class="content__default">default: '|'</span>
+						<div class="content__object-config_row_text">The symbol that will be displayed instead of the cursor. Allowed HTML.</div>
+					</div>
+
+					<div class="content__object-config_row">
+						blinkingCursor: (<span class="content__value">boolean</span>)<span class="content__default">default: true</span>
+						<div class="content__object-config_row_text">Parameter responsible for blinking the cursor.</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<div class="content__subtitle">
+					<h3>Examples:</h3>
+				</div>
+				<div class="content__text">
+					<p>A simple example of script execution:</p>
+					<div class="content__code">new typing({
+	element: document.getElementById('#id'),
+	strings: ['First string', 'Next string'],
+	loop: true
+})</div>
+				<div class="content__window" id="simple-window"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="content__text">
+					<p>You can also call methods on an object:</p>
+					<div class="content__code">	new typing({
+		element: document.getElementById('#id'),
+		speed: 60,
+		removalRate: 40,
+		loop: true
+	})
+	.type('It\'s very simple')
+	.pause(1000)
+	.delete()
+	.type('Try it yourself!')
+	.pause(1000)</div>
+				<div class="content__window" id="chaining-window"></div>
+			</div>
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-12">
+				<div class="content__subtitle">
+					<h3>Chaining:</h3>
+				</div>
+				<div class="content__object-config">
+					<div class="content__object-config_row">
+						.type(<span class="content__value">string</span>)
+						<div class="content__object-config_row_text">Adds a string to the task stack for typing a.</div>
+					</div>
+
+					<div class="content__object-config_row">
+						.delete(<span class="content__value">number</span>)
+						<div class="content__object-config_row_text">Adds the number of characters to the task stack for deletion.</div></div>
+
+					<div class="content__object-config_row">
+						.optoins(<span class="content__value">object</span>)
+						<div class="content__object-config_row_text">Updates the parameters object.</div></div>
+
+					<div class="content__object-config_row">
+						.pause(<span class="content__value">number</span>)
+						<div class="content__object-config_row_text">Adds a pause to the task stack.</div></div>
+
+					<div class="content__object-config_row">
+					.break()
+						<div class="content__object-config_row_text">Adds a line break to the task stack.</div></div>
+
+					<div class="content__object-config_row">
+					.freeze()
+						<div class="content__object-config_row_text">Freezes the execution of the script.</div></div>
+
+					<div class="content__object-config_row">
+					.unfreeze()
+						<div class="content__object-config_row_text">Unfreezes the execution of the script.</div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="bottom center">
+			Developed with <span class="bottom__heart"><img src="css/img/heart.svg"></span> by Dmitry Antipov
+		</div>
+	</div>
+</div>
+
+<script src="js/typingscript.min.v.1.0.js"></script>
+
+
+<script>
+
+
+'use strict';
+
+new typing({
+	element: document.getElementById('simple-window'),
+	strings: ['First string', 'Next string'],
+	loop: true
+});
+
+var code = document.body.querySelectorAll('.content__code');
+
+Array.prototype.forEach.call(code, function (item) {
+	item.innerHTML = syntax(item.innerHTML.trim());
+});
+
+function syntax(code) {
+	var comments = [];
+	var strings = [];
+	var res = [];
+	var all = { 'C': comments, 'S': strings, 'R': res };
+	var safe = { '<': '<', '>': '>', '&': '&' };
+
+	return code.replace(/[<>&]/g, function (m) {
+		return safe[m];
+	}).replace(/\/\*[\s\S]*\*\//g, function (m) {
+		var l = comments.length;comments.push(m);return '~~~C' + l + '~~~';
+	}).replace(/([^\\])\/\/[^\n]*\n/g, function (m, f) {
+		var l = comments.length;comments.push(m);return f + '~~~C' + l + '~~~';
+	}).replace(/\/(\\\/|[^\/\n])*\/[gim]{0,3}/g, function (m) {
+		var l = res.length;res.push(m);return '~~~R' + l + '~~~';
+	}).replace(/([^\\])((?:'(?:\\'|[^'])*')|(?:"(?:\\"|[^"])*"))/g, function (m, f, s) {
+		var l = strings.length;strings.push(s);return f + '~~~S' + l + '~~~';
+	}).replace(/(var|function|typeof|new|return|if|for|in|while|break|do|continue|switch|case)([^a-z0-9\$_])/gi, '<span class="kwrd">$1</span>$2').replace(/(\{|\}|\]|\[|\|)/gi, '<span class="gly">$1</span>').replace(/([a-z\_\$][a-z0-9_]*)[\s]*\(/gi, '<span class="func">$1</span>(').replace(/~~~([CSR])(\d+)~~~/g, function (m, t, i) {
+		return '<span class="' + t + '">' + all[t][i] + '</span>';
+	}).replace(/\n/g, '<br/>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+}
+
+document.addEventListener('click', function (e) {
+	var target = e.target.closest('.content__object-config_row');
+	if (target) {
+		target.onmousedown = function () {
+			return false;
+		};
+		if (target.classList.contains('open')) target.classList.remove('open');else target.classList.add('open');
+	}
+});
+
+var body = document.body.querySelector('.body');
+body.style.height = document.documentElement.clientHeight + 5 + 'px';
+
+var bodyCentering = document.body.querySelector('.body__centering');
+bodyCentering.style.marginTop = document.documentElement.clientHeight / 2 - bodyCentering.offsetHeight / 2 + 'px';
+
+var f = new typing({
+	element: document.body.querySelector('.body__window'),
+	speed: 60,
+	removalRate: 40,
+	loop: false,
+	cursor: true,
+	cursorHTML: ' |',
+	blinkingCursor: true,
+	autoStart: false
+}).type('Hello develooper').pause(500).options({
+	removalRate: 100
+}).delete(4).pause(500).type('per').options({
+	speed: 200
+}).type('..').options({
+	speed: 60
+}).pause(700).break().type('how are you doing?').options({
+	removalRate: 20
+}).pause(2000);
+
+new typing({
+	element: document.getElementById('chaining-window'),
+	speed: 60,
+	removalRate: 40,
+	loop: true
+}).type('It\'s very simple').pause(1000).delete().type('Try it yourself!').pause(1000);
+
+</script>
+</body>
+</html>

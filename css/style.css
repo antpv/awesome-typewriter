@@ -1,0 +1,398 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+  color: #333447;
+}
+
+/* ROOT FONT STYLES */
+
+* {
+  font-family: 'Proxima Nova', Helvetica, sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+
+h1, h2, h3 {
+	margin: 0;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* POSITIONING */
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==== GRID SYSTEM ==== */
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+.row:first-child {
+  margin-top: 0;
+}
+
+.row [class^="col"] {
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 96%;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/* ==== USERS STYLE ==== */
+
+.body {
+	width: 100%;
+	height: 200px;
+	position: relative;
+	text-align: center;
+	background-color: #8BC6EC;
+	background-image: linear-gradient(35deg, #8BC6EC 0%, #9599E2 100%);
+	color: #fff;
+}
+
+.body:after {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	border-radius: 5px 5px 0 0;
+	left: 0;
+	height: 5px;
+	background-color: #fff;
+	display: inline-block;
+	content: '';
+}
+
+.body__title {
+	display: inline-block;
+	margin-bottom: 50px;
+	line-height: 30px;
+	width: 100%;
+}
+
+.body__centering {
+	display: inline-block;
+}
+
+.body__window {
+	background-color: #4B56A366;
+	font-size: 1.1rem;
+	padding: 15px 30px;
+	min-width: 340px;
+	max-width: 90%;
+	display: inline-block;
+	font-weight: 400;
+	text-align: left;
+	line-height: 35px;
+	height: 100px;
+	border-radius: 5px;
+	color: #fff;
+	vertical-align: middle;
+	box-shadow: 0 5px 10px #28669833;
+}
+
+.body__links-block {
+	display: inline-block;
+	margin-top: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+.body__links-block a[class="get-link"] {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	width: 130px;
+	border: 1px solid #fff;
+	color: #fff;
+	font-weight: 600;
+	background-color: transparent;
+	font-size: .9rem;
+	border-radius: 50px;
+	transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.body__links-block a[class="get-link"]:hover {
+	background-color: #fff;
+	color: #333447;
+}
+
+.body__links-block a[class="git-link"] {
+	display: inline-block;
+	height: 40px;
+	padding-left: 30px;
+	margin-top: 15px;
+	line-height: 40px;
+	color: #fff;
+	font-weight: 600;
+	background-color: transparent;
+	font-size: .9rem;
+	transition: background-color .3s ease-in-out, color .3s ease-in-out;
+	position: relative;
+}
+.body__links-block a[class="git-link"] img {
+	position: absolute;
+	content: '';
+	top: 9px;
+	left: 0;
+	border-radius: 30px;
+	width: 20px;
+	height: 20px;
+}
+
+
+
+
+
+.content {
+	margin-top: 50px;
+}
+
+.content__text p {
+	margin: 10px 0;
+}
+
+.content__subtitle  {
+	margin-bottom: 10px;
+}
+
+.content__code, .content__url {
+	background-color: #0f253a;
+	border-radius: 3px;
+	padding: 15px 20px;
+	font-size: .9rem;
+	letter-spacing: 1px;
+	font-weight: 600;
+	color: #eaeaea;
+}
+.content__window {
+	background-color: #f0f0f0;
+	border-radius: 3px;
+	padding: 15px 20px;
+	margin-top: 15px;
+}
+
+.content__object-config {
+	background-color: #f6f6f6;
+	border: 1px solid #eaeaea;
+	border-radius: 3px;
+}
+
+.content__object-config_row {
+	cursor: pointer;
+	border-bottom: 1px solid #f0f0f0;
+	padding: 15px 20px 15px 45px;
+	position: relative;
+}
+.content__object-config_row::after {
+	content: ''; 
+	position: absolute; 
+	left: 28px;
+	top: 21px;
+	border: 5px solid transparent;
+	border-left: 5px solid #b8b8b8;
+}
+.content__object-config_row[class*="open"]::after {
+	content: ''; 
+	position: absolute; 
+	top: 21px;
+	left: 25px;
+	top: 25px;
+	border: 5px solid transparent;
+	border-top: 5px solid #b8b8b8;
+}
+.content__object-config_row:last-child {
+	border-bottom: 0;
+}
+
+
+.content__object-config_row_text {
+	display: none;
+}
+.content__object-config_row[class*="open"] .content__object-config_row_text {
+	display: block;
+	margin-top: 10px;
+	font-size: .9rem;
+}
+
+.content__value {
+	background-color: rgba(0, 81, 202, 0.2);
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-size: .8rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin: 0 2px;
+	color: #307e95;
+}
+
+.content__default {
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-size: .8rem;
+	letter-spacing: 1px;
+	margin: 0 2px;
+	color: #999;
+}
+.content__important {
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-size: .8rem;
+	letter-spacing: 1px;
+	margin: 0 2px;
+	color: #fb9666;
+}
+
+
+.bottom {
+	padding: 20px 0 40px 0;
+	font-size: .9rem;
+}
+.bottom__heart {
+	margin: 0 5px;
+	vertical-align: middle;
+}
+.bottom__heart img {
+	width: 14px;
+	height: 14px;
+}
+
+/* ==== CODE STYLE ====*/
+
+.S{color:#fb9666}/* Строки красные */
+.func{color:#90b0e7}/* Юзер-функции синие */
+.C{color:#888}/* Комменты оранжевые */
+.kwrd{color: #e790b4;}/* Ключевые слова полужирные */
+.R{color:#888} /*Серые регвыражения */
+
+/* ==== MEDIA ==== */
+
+@media only screen and (min-width: 33.75em) {  /* 540px */
+  .container {
+	width: 80%;
+  }
+}
+
+@media only screen and (min-width: 45em) {  /* 720px */
+  .col-1 {
+	width: 4.33%;
+  }
+
+  .col-2 {
+	width: 12.66%;
+  }
+
+  .col-3 {
+	width: 21%;
+  }
+
+  .col-4 {
+	width: 29.33%;
+  }
+
+  .col-5 {
+	width: 37.66%;
+  }
+
+  .col-6 {
+	width: 46%;
+  }
+
+  .col-7 {
+	width: 54.33%;
+  }
+
+  .col-8 {
+	width: 62.66%;
+  }
+
+  .col-9 {
+	width: 71%;
+  }
+
+  .col-10 {
+	width: 79.33%;
+  }
+
+  .col-11 {
+	width: 87.66%;
+  }
+
+  .col-12 {
+	width: 96%;
+  }
+
+  .hidden-sm {
+	display: block;
+  }
+}
+
+@media only screen and (min-width: 60em) { /* 960px */
+  .container {
+	width: 75%;
+	max-width: 60rem;
+  }
+}
