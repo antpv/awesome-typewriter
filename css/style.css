@@ -15,7 +15,8 @@ body {
 * {
   font-family: 'Proxima Nova', Helvetica, sans-serif;
   line-height: 1.5;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* TYPOGRAPHY */
@@ -110,6 +111,8 @@ a {
 	position: relative;
 	text-align: center;
 	background-color: #8BC6EC;
+	background-image: -webkit-linear-gradient(55deg, #8BC6EC 0%, #9599E2 100%);
+	background-image: -o-linear-gradient(55deg, #8BC6EC 0%, #9599E2 100%);
 	background-image: linear-gradient(35deg, #8BC6EC 0%, #9599E2 100%);
 	color: #fff;
 }
@@ -151,7 +154,8 @@ a {
 	border-radius: 5px;
 	color: #fff;
 	vertical-align: middle;
-	box-shadow: 0 5px 10px #28669833;
+	-webkit-box-shadow: 0 5px 10px #28669833;
+	        box-shadow: 0 5px 10px #28669833;
 }
 
 .body__links-block {
@@ -172,6 +176,8 @@ a {
 	background-color: transparent;
 	font-size: .9rem;
 	border-radius: 50px;
+	-webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out;
+	-o-transition: background-color .3s ease-in-out, color .3s ease-in-out;
 	transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
@@ -190,6 +196,8 @@ a {
 	font-weight: 600;
 	background-color: transparent;
 	font-size: .9rem;
+	-webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out;
+	-o-transition: background-color .3s ease-in-out, color .3s ease-in-out;
 	transition: background-color .3s ease-in-out, color .3s ease-in-out;
 	position: relative;
 }
@@ -213,6 +221,11 @@ a {
 
 .content__text p {
 	margin: 10px 0;
+}
+
+.content__text a {
+	color: #307e95;
+	border-bottom: 1px solid #e0e0e0;
 }
 
 .content__subtitle  {
