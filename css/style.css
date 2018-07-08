@@ -313,7 +313,7 @@ a {
 }
 .bottom__heart {
 	margin: 0 5px;
-	vertical-align: middle;
+	vertical-align: middle; 
 }
 .bottom__heart img {
 	width: 14px;
