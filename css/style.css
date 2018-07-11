@@ -15,7 +15,8 @@ body {
 * {
   font-family: 'Proxima Nova', Helvetica, sans-serif;
   line-height: 1.5;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* TYPOGRAPHY */
@@ -110,6 +111,8 @@ a {
 	position: relative;
 	text-align: center;
 	background-color: #8BC6EC;
+	background-image: -webkit-linear-gradient(55deg, #8BC6EC 0%, #9599E2 100%);
+	background-image: -o-linear-gradient(55deg, #8BC6EC 0%, #9599E2 100%);
 	background-image: linear-gradient(35deg, #8BC6EC 0%, #9599E2 100%);
 	color: #fff;
 }
@@ -151,7 +154,8 @@ a {
 	border-radius: 5px;
 	color: #fff;
 	vertical-align: middle;
-	box-shadow: 0 5px 10px #28669833;
+	-webkit-box-shadow: 0 5px 10px #28669833;
+	        box-shadow: 0 5px 10px #28669833;
 }
 
 .body__links-block {
@@ -172,6 +176,8 @@ a {
 	background-color: transparent;
 	font-size: .9rem;
 	border-radius: 50px;
+	-webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out;
+	-o-transition: background-color .3s ease-in-out, color .3s ease-in-out;
 	transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
@@ -183,22 +189,21 @@ a {
 .body__links-block a[class="git-link"] {
 	display: inline-block;
 	height: 40px;
-	padding-left: 30px;
 	margin-top: 15px;
 	line-height: 40px;
 	color: #fff;
 	font-weight: 600;
 	background-color: transparent;
 	font-size: .9rem;
+	-webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out;
+	-o-transition: background-color .3s ease-in-out, color .3s ease-in-out;
 	transition: background-color .3s ease-in-out, color .3s ease-in-out;
-	position: relative;
 }
+
 .body__links-block a[class="git-link"] img {
-	position: absolute;
-	content: '';
-	top: 9px;
-	left: 0;
-	border-radius: 30px;
+	margin-top: 9px;
+	margin-right: 5px;
+	vertical-align: top;
 	width: 20px;
 	height: 20px;
 }
@@ -330,11 +335,21 @@ a {
 
 /* ==== CODE STYLE ====*/
 
-.S{color:#fb9666}/* Строки красные */
-.func{color:#90b0e7}/* Юзер-функции синие */
-.C{color:#888}/* Комменты оранжевые */
-.kwrd{color: #e790b4;}/* Ключевые слова полужирные */
-.R{color:#888} /*Серые регвыражения */
+.S {
+	color: #fb9666;
+}
+.func {
+	color: #90b0e7;
+}
+.C {
+	color: #888;
+}
+.kwrd {
+	color: #e790b4;
+}
+.R {
+	color: #888;
+}
 
 /* ==== MEDIA ==== */
 

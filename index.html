@@ -17,6 +17,7 @@
 		<div class="body__links-block">
 			<a href="#content" class="get-link">Get Started</a><br>
 			<a href="https://github.com/antpv/typingscript" class="git-link"><span class="get-link__image"><img src="css/img/github-logo.svg"></span> View on Github</a>
+
 		</div>
 	</div>
 </div>
@@ -105,7 +106,6 @@
 						<div class="content__object-config_row_text">Parameter responsible for blinking the cursor.</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
@@ -125,6 +125,8 @@
 				</div>
 			</div>
 		</div>
+
+
 		<div class="row">
 			<div class="col-12">
 				<div class="content__text">
@@ -140,7 +142,8 @@
 	.delete()
 	.type('Try it yourself!')
 	.pause(1000)</div>
-				<div class="content__window" id="chaining-window"></div>
+					<div class="content__window" id="chaining-window"></div>
+				</div>
 			</div>
 		</div>
 
@@ -243,11 +246,18 @@ document.addEventListener('click', function (e) {
 	}
 });
 
-var body = document.body.querySelector('.body');
-body.style.height = document.documentElement.clientHeight + 5 + 'px';
+function bodySize() {
+	var body = document.body.querySelector('.body');
+	body.style.height = document.documentElement.clientHeight + 5 + 'px';
 
-var bodyCentering = document.body.querySelector('.body__centering');
-bodyCentering.style.marginTop = document.documentElement.clientHeight / 2 - bodyCentering.offsetHeight / 2 + 'px';
+	var bodyCentering = document.body.querySelector('.body__centering');
+	bodyCentering.style.marginTop = document.documentElement.clientHeight / 2 - bodyCentering.offsetHeight / 2 + 'px';
+}
+
+bodySize();
+
+window.addEventListener('resize', bodySize)
+
 
 var f = new typing({
 	element: document.body.querySelector('.body__window'),
@@ -255,7 +265,6 @@ var f = new typing({
 	removalRate: 40,
 	loop: false,
 	cursor: true,
-	cursorHTML: ' |',
 	blinkingCursor: true,
 	autoStart: false
 }).type('Hello develooper').pause(500).options({
@@ -264,7 +273,7 @@ var f = new typing({
 	speed: 200
 }).type('..').options({
 	speed: 60
-}).pause(700).break().type('how are you doing?').options({
+}).pause(700).break().type('how are you?').options({
 	removalRate: 20
 }).pause(2000);
 
