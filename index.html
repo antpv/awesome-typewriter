@@ -29,9 +29,16 @@
 					<h2>Installation</h2>
 				</div>
 				<div class="content__text">
-					<p>Connect <a href="https://github.com/antpv/typingscript/blob/master/js/typingscript.min.v.1.0.js">this script</a> with this code:</p>
+					<h3>npm</h3>
+					<p>Run npm command:</p>
+					<div class="content__url">npm install typingscript</div>
+					<p>The typical import default (main) file:</p>
+					<div class="content__url">import Typing from 'typingscript';</div>
 				</div>
-				<div class="content__url">&lt;script src=&quot;typingscript.min.v.1.0.js&quot; /&gt;</div>
+				<div class="content__text mgtop">
+					<h3>Alternative</h3>
+					<p>Clone or download <a href="https://github.com/antpv/typingscript/blob/master/js/typingscript.min.js">this script</a>.
+				</div>
 
 			</div>
 		</div>
@@ -193,7 +200,7 @@
 	</div> 
 </div>
 
-<script src="js/typingscript.min.v.1.0.js"></script>
+<script src="js/typingscript.min.js"></script>
 
 
 <script>
@@ -245,18 +252,6 @@ document.addEventListener('click', function (e) {
 	}
 });
 
-function bodySize() {
-	var body = document.body.querySelector('.body');
-	body.style.height = document.documentElement.clientHeight + 5 + 'px';
-
-	var bodyCentering = document.body.querySelector('.body__centering');
-	bodyCentering.style.marginTop = document.documentElement.clientHeight / 2 - bodyCentering.offsetHeight / 2 + 'px';
-}
-
-bodySize();
-
-window.addEventListener('resize', bodySize)
-
 
 var f = new typing({
 	element: document.body.querySelector('.body__window'),
@@ -266,22 +261,41 @@ var f = new typing({
 	cursor: true,
 	blinkingCursor: true,
 	autoStart: false
-}).type('Hello develooper').pause(500).options({
-	removalRate: 100
-}).delete(4).pause(500).type('per').options({
-	speed: 200
-}).type('..').options({
-	speed: 60
-}).pause(700).break().type('how are you?').options({
-	removalRate: 20
-}).pause(2000);
+})
+	.type('Hello develooper')
+	.pause(500)
+	.options({
+		removalRate: 100
+	})
+	.delete(4)
+	.pause(500)
+	.type('per')
+	.options({
+		speed: 200
+	})
+	.type('..')
+	.options({
+		speed: 60
+	})
+	.pause(700)
+	.break()
+	.type('how are you?')
+	.options({
+		removalRate: 20
+	})
+	.pause(2000);
 
 new typing({
 	element: document.getElementById('chaining-window'),
 	speed: 60,
 	removalRate: 40,
 	loop: true
-}).type('It\'s very simple').pause(1000).delete().type('Try it yourself!').pause(1000);
+})
+	.type('It\'s very simple')
+	.pause(1000)
+	.delete()
+	.type('Try it yourself!')
+	.pause(1000);
 
 </script>
 </body>

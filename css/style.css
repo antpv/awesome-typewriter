@@ -107,7 +107,7 @@ a {
 
 .body {
 	width: 100%;
-	height: 200px;
+	height: calc(100vh + 5px);
 	position: relative;
 	text-align: center;
 	background-color: #8BC6EC;
@@ -137,6 +137,10 @@ a {
 }
 
 .body__centering {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	display: inline-block;
 }
 
@@ -208,12 +212,12 @@ a {
 	height: 20px;
 }
 
-
-
-
-
 .content {
 	margin-top: 50px;
+}
+
+.mgtop {
+	margin-top: 20px;
 }
 
 .content__text p {
