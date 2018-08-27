@@ -1,41 +1,53 @@
+@font-face {
+	font-family: 'Proxima Nova';
+	font-weight: 400;
+	src: url(fonts/ProximaNovaRegular.otf);
+}
+@font-face {
+	font-family: 'Proxima Nova';
+	font-weight: 600;
+	src: url(fonts/ProximaNovaBold.otf);
+}
+
 html,
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  top: 0;
-  font-size: 100%;
-  color: #333447;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: 0;
+	font-size: 100%;
+	color: #333447;
 }
 
 /* ROOT FONT STYLES */
 
 * {
-  font-family: 'Proxima Nova', Helvetica, sans-serif;
-  line-height: 1.5;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+	font-family: 'Proxima Nova', Helvetica, sans-serif;
+	line-height: 1.5;
+	-webkit-box-sizing: border-box;
+					box-sizing: border-box;
 }
 
 /* TYPOGRAPHY */
 
 h1, h2, h3 {
 	margin: 0;
+	font-weight: 600;
 }
 
 
 h1 {
-  font-size: 2.5rem;
+	font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.375rem;
+	font-size: 1.375rem;
 }
 
 a {
@@ -45,40 +57,40 @@ a {
 /* POSITIONING */
 
 .left {
-  text-align: left;
+	text-align: left;
 }
 
 .right {
-  text-align: right;
+	text-align: right;
 }
 
 .center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* ==== GRID SYSTEM ==== */
 
 .container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .row {
-  position: relative;
-  width: 100%;
-  margin-top: 20px;
+	position: relative;
+	width: 100%;
+	margin-top: 20px;
 }
 .row:first-child {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 .row [class^="col"] {
-  float: left;
-  margin: 0.5rem 2%;
-  min-height: 0.125rem;
+	float: left;
+	margin: 0.5rem 2%;
+	min-height: 0.125rem;
 }
 
 .col-1,
@@ -93,7 +105,7 @@ a {
 .col-10,
 .col-11,
 .col-12 {
-  width: 96%;
+	width: 96%;
 }
 
 .row::after {
@@ -140,26 +152,29 @@ a {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
 	display: inline-block;
 }
 
 .body__window {
 	background-color: #4B56A366;
-	font-size: 1.1rem;
+	font-size: 1rem;
 	padding: 15px 30px;
 	min-width: 340px;
 	max-width: 90%;
 	display: inline-block;
-	font-weight: 400;
+	font-weight: 600;
 	text-align: left;
 	line-height: 35px;
 	height: 100px;
+	letter-spacing: 1px;
 	border-radius: 5px;
 	color: #fff;
 	vertical-align: middle;
 	-webkit-box-shadow: 0 5px 10px #28669833;
-	        box-shadow: 0 5px 10px #28669833;
+					box-shadow: 0 5px 10px #28669833;
 }
 
 .body__links-block {
@@ -196,7 +211,7 @@ a {
 	margin-top: 15px;
 	line-height: 40px;
 	color: #fff;
-	font-weight: 600;
+	font-weight: normal !important;
 	background-color: transparent;
 	font-size: .9rem;
 	-webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out;
@@ -238,8 +253,8 @@ a {
 	border-radius: 3px;
 	padding: 15px 20px;
 	font-size: .9rem;
+	word-wrap: break-word;
 	letter-spacing: 1px;
-	font-weight: 600;
 	color: #eaeaea;
 }
 .content__window {
@@ -358,68 +373,68 @@ a {
 /* ==== MEDIA ==== */
 
 @media only screen and (min-width: 33.75em) {  /* 540px */
-  .container {
+	.container {
 	width: 80%;
-  }
+	}
 }
 
 @media only screen and (min-width: 45em) {  /* 720px */
-  .col-1 {
+	.col-1 {
 	width: 4.33%;
-  }
+	}
 
-  .col-2 {
+	.col-2 {
 	width: 12.66%;
-  }
+	}
 
-  .col-3 {
+	.col-3 {
 	width: 21%;
-  }
+	}
 
-  .col-4 {
+	.col-4 {
 	width: 29.33%;
-  }
+	}
 
-  .col-5 {
+	.col-5 {
 	width: 37.66%;
-  }
+	}
 
-  .col-6 {
+	.col-6 {
 	width: 46%;
-  }
+	}
 
-  .col-7 {
+	.col-7 {
 	width: 54.33%;
-  }
+	}
 
-  .col-8 {
+	.col-8 {
 	width: 62.66%;
-  }
+	}
 
-  .col-9 {
+	.col-9 {
 	width: 71%;
-  }
+	}
 
-  .col-10 {
+	.col-10 {
 	width: 79.33%;
-  }
+	}
 
-  .col-11 {
+	.col-11 {
 	width: 87.66%;
-  }
+	}
 
-  .col-12 {
+	.col-12 {
 	width: 96%;
-  }
+	}
 
-  .hidden-sm {
+	.hidden-sm {
 	display: block;
-  }
+	}
 }
 
 @media only screen and (min-width: 60em) { /* 960px */
-  .container {
+	.container {
 	width: 75%;
 	max-width: 60rem;
-  }
+	}
 }
